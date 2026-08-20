@@ -9,7 +9,6 @@ def _():
     import os
     # Prevent memory pre-allocation for flexible memory management
     os.environ['XLA_PYTHON_CLIENT_PREALLOCATE'] = 'false'
-    os.environ['XLA_PYTHON_CLIENT_MEM_FRACTION'] = '0.8' # Use 80% of GPU memory default is '.75'
 
     import marimo as mo
     import numpy as np
