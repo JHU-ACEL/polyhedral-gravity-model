@@ -31,9 +31,11 @@ def plot_triangulation(vertices, faces, title, filename=None):
     ax.set_ylabel("$y$")
     ax.set_zlabel("$z$")
 
-
     if filename is not None:
         fig.savefig(filename, dpi=300)
+
+    return fig
+
 
 
 def plot_grid_2d(X, Y, z, title, filename=None, labels=("$x$", "$y$"), limits=(-2, 2), plot_rectangle=False, vertices=None,
@@ -86,6 +88,8 @@ def plot_grid_2d(X, Y, z, title, filename=None, labels=("$x$", "$y$"), limits=(-
     if filename is not None:
         fig.savefig(filename, dpi=300)
 
+    return fig
+
 
 def plot_grid_3d(X, Y, z, title, filename=None, labels=("$x$", "$y$")):
     """Plots the potential in 3D
@@ -121,6 +125,8 @@ def plot_grid_3d(X, Y, z, title, filename=None, labels=("$x$", "$y$")):
 
     if filename is not None:
         fig.savefig(filename, dpi=300)
+
+    return fig
 
 
 def plot_quiver(X, Y, xy, title, filename=None, labels=("$x$", "$y$"), limits=(-2, 2), plot_rectangle=False, vertices=None,
@@ -171,6 +177,8 @@ def plot_quiver(X, Y, xy, title, filename=None, labels=("$x$", "$y$"), limits=(-
 
     if filename is not None:
         fig.savefig(filename, dpi=300)
+
+    return fig
 
 
 # Switch to turn plotting the polygon of, if one is to lazy to refactor code
